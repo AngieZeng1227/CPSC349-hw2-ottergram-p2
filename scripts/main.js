@@ -41,7 +41,7 @@ function addThumbClickHandler(thumb) {
     thumb.addEventListener('click', function (event) {
         event.preventDefault();
         setDetailsFromThumb(thumb);
-        
+
         showDetails();
     });
 }
@@ -66,9 +66,8 @@ function cycleLeft(thumbnails) {
 }
 
 function getCurrentPosition(thumbnails) {
-    var index = 0 ;
-    while (document.querySelector(DETAIL_TITLE_SELECTOR).textContent !== titleFromThumb(thumbnails[index]))
-    {
+    var index = 0;
+    while (document.querySelector(DETAIL_TITLE_SELECTOR).textContent !== titleFromThumb(thumbnails[index])) {
         index++;
     }
     position = index;
